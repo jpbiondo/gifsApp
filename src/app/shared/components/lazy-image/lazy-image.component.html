@@ -1,0 +1,13 @@
+<div class="flex h-full justify-center">
+  <img
+    [src]="url"
+    [alt]="title"
+    class="rounded-xl animate__animated animate__fadeIn animate__faster"
+    (load)="onLoad()"
+    [ngStyle]="{display: hasLoaded ? '': 'none'}">
+    <img
+      *ngIf="!hasLoaded"
+      src="/assets/loader.svg"
+      alt="">
+</div>
+

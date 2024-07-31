@@ -1,0 +1,74 @@
+<div class="
+  fixed left-0 top-0
+  w-full h-full
+  bg-black opacity-25
+  z-[999]
+  duration-200"
+  [ngClass]="{'hidden' : !isOpen}"
+  (click)="setIsOpen()">
+
+</div>
+
+<div class = "fixed z-[1000] h-screen p-2 bg-[#33004A]
+shadow-md duration-200
+justify-center w-72
+-left-72
+top-0
+"
+[ngClass]="{'left-0' : isOpen }"
+>
+  <!-- Title -->
+  <div class=" inline-flex justify-center items-center gap-2">
+
+    <div class="cursor-pointer px-1 py-0" (click)="setIsOpen()" >
+
+      <span class="text-3xl font-light text-white material-symbols-outlined select-none">
+        menu
+      </span>
+
+    </div>
+
+    <div
+    class="shadow-sm flex items-center justify-center rounded-md bg-[#066E97] h-10 w-10">
+
+      <a routerLink="/" (click)="setIsOpen()">
+
+        <span class="text-4xl text-white material-symbols-outlined select-none">
+            gif
+        </span>
+
+      </a>
+
+    </div>
+
+    <h1 class="text-white text-2xl font-bold"
+    >GIFS APP
+    </h1>
+
+  </div>
+
+  <!-- History -->
+  <div class="flex text-white font-medium mt-3 mx-2 mb-2">
+    <i class="fa-solid fa-clock-rotate-left text-lg mr-3"></i>
+    <h4 class="text-white text-xl">History</h4>
+  </div>
+
+  <ul class="bg-[#220138] rounded-md mx-2">
+    <li
+    *ngFor="let tag of this.tags"
+    (click)="searchTag(tag)"
+    class="
+    text-white text-center font-light text-xl
+    p-2 border-b-2 border-[#4D01A6]
+    cursor-pointer
+    duration-200
+    hover:bg-[#4D01A6]
+    first:hover:rounded-t-md
+    last:border-0
+    last:hover:rounded-b-md "
+    >
+      {{tag | titlecase}}
+    </li>
+  </ul>
+
+</div>

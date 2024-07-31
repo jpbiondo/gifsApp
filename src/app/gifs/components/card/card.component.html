@@ -1,0 +1,21 @@
+<div class="
+  bg-[#33004A]
+  flex flex-col justify-between items-center
+  py-1 px-1
+  shadow-lg
+  rounded-xl
+  h-72">
+
+  <shared-lazy-image
+    [url]="gif.images.fixed_height.url"
+    [title]="gif.title"
+  ></shared-lazy-image>
+  <div class="text-light text-center">
+    <h6 class="text-lg font-medium text-white">
+      {{(gif.title | cardtitle) || 'No Title'}}
+    </h6>
+    <span class="text-base font-normal text-slate-100">
+      by {{gif.username || 'Unknown author'}}
+    </span>
+  </div>
+</div>

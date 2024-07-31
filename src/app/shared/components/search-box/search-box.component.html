@@ -1,0 +1,23 @@
+<div class="flex items-center relative">
+  <button class="
+  flex justify-center items-center
+  h-full
+  px-3
+  absolute
+  right-0
+  text-white font-bold"
+  (click)="searchTag()"
+  >
+    <span class="material-symbols-outlined">
+      search
+    </span>
+  </button>
+
+  <input type="search"
+  class="bg-[#4D01A6] focus:outline-none w-full text-white placeholder-white placeholder-opacity-90 rounded-md px-2 py-3"
+  placeholder="Search gifs..."
+  #txtTagInput
+  enterkeyhint="go"
+  (keyup.enter)="searchTag()"
+  >
+</div>
